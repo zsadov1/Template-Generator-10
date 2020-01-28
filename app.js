@@ -63,8 +63,17 @@ function htmlMain (htmlEmployees , teamName) {
     return `${main.html}`;
 }
 
+class EmployeeBrief {
+    constructor () {
+        this.employeeArray = [];
+        this.teamName = "";
+    }
 
+    createTeam(){
+        this.employeeArray= [];
+        console.log("Lets create your team!");
+        return this.teamName();
+    }
 
-
-
-
+    
+}
