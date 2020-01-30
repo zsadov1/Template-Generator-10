@@ -204,5 +204,26 @@ class EmployeeBrief {
             return this.getTitle();
         });
     }
+    
+    getTitle(){
+        return inquirer
+        .prompt([{
+            type: "list",
+            name: "employeeTitle",
+            message: "Would you liek to add an Engineer or Intern?",
+            choices: ["Engineer" , "Intern"]
+        }
+        ])
+        .then(val => {
+            const employeeTitle = val.employeeTitle;
+            switch (employeeTitle) {
+                case "Engineer":
+                    return this createEngineer();
+                case "Intern":
+                    return this.createIntern();
+            }
+        });
+    }
 
-
+    
+}
