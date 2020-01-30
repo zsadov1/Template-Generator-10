@@ -9,13 +9,13 @@ const fs = require("fs");
 
 function htmlManager (name , title , id , email , officeNumber) {
     return `    
-        <div class="card bg-light" style="width: 18rem;">
+        <div class="card bg-light">
         <div class="card-body">
             <h2 class="card-title">${name}</h2>
             <h3 class="card-title">${title}</h3> 
         </div>
         </div>
-        <div class="card-body bg-light" style="width: 18rem;">
+        <div class="card-body bg-light">
         <p class="card-text">ID: ${id}</p>
         <p class="card-text">Email: ${email}</p>
         <p class="card-text">Office Number: ${officeNumber}</p>
@@ -25,13 +25,13 @@ function htmlManager (name , title , id , email , officeNumber) {
 
 function htmlEngineer (name , title ,  id , email,  github) {
     return `
-        <div class="card bg-light" style="width: 18rem;">
+        <div class="card bg-light">
         <div class="card-body">
             <h2 class="card-title">${name}</h2>
             <h3 class="card-title">${title}</h3> 
         </div>
         </div>
-        <div class="card-body bg-light" style="width: 18rem;">
+        <div class="card-body bg-light">
         <p class="card-text">ID: ${id}</p>
         <p class="card-text">Email: ${email}</p>
         <p>Github: <a href="https://github.com/${github}" target = "_blank">${github}</a></p>
@@ -42,13 +42,13 @@ function htmlEngineer (name , title ,  id , email,  github) {
 
 function htmlIntern(name , title ,  id , email , school) {
     return ` 
-        <div class="card bg-light" style="width: 18rem;">
+        <div class="card bg-light">
         <div class="card-body">
             <h2 class="card-title">${name}</h2>
             <h3 class="card-title">${title}</h3> 
         </div>
         </div>
-        <div class="card-body bg-light" style="width: 18rem;">
+        <div class="card-body bg-light">
         <p class="card-text">ID: ${id}</p>
         <p class="card-text">Email: ${email}</p>
         <p class="card-text">School: ${school}</p>
@@ -197,7 +197,7 @@ class EmployeeBrief {
             const newManager = new Manager(
                 val.employeeName,
                 val.employeeId,
-                val.employeeemail,
+                val.employeeEmail,
                 val.employeeOffice
             );
             this.employeeArray.push(newManager);
